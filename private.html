@@ -10,7 +10,7 @@ title: Private
 
 <p id="loading">Checking authentication...</p>
 
-<script src="/assets/js/supabase.js"></script>
+<script src="{{ '/assets/js/supabase.js' | relative_url }}"></script>
 
 <script>
 async function checkAuth() {
@@ -20,7 +20,7 @@ async function checkAuth() {
 
     if (!user) {
         console.log("No User!");
-        window.location.href = '/login.html';
+        window.location.href = '{{ "/login.html" | relative_url }}';
         return;
     }
 
