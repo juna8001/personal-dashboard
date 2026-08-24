@@ -7,12 +7,13 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <!-- Supabase library -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
     <!-- Our Supabase configuration -->
-    <script src="{{ '/assets/js/supabase.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/supabase.js' | relative_url }}"></script>
 </head>
 
 <body>

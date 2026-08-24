@@ -14,7 +14,7 @@ title: Private
     <button id="logout">Logout</button>
 </div>
 
-<script>
+<script defer>
 async function checkAuth() {
     const { data: { user } } = await supabaseClient.auth.getUser();
 
