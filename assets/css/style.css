@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 :root {
     /* Colors */
     --background: #1d1d16;
@@ -7,9 +9,9 @@
     --text: #fbfbf9;
 
     /* Shapes */
-    --radius-small: 6px;
-    --radius-medium: 10px;
-    --radius-large: 16px;
+    --radius-small: 16px;
+    --radius-medium: 32px;
+    --radius-large: 64px;
 
     /* Spacing */
     --space-small: 8px;
