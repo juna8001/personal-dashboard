@@ -16,10 +16,15 @@ title: Private
 async function checkAuth() {
     const { data: { user } } = await supabase.auth.getUser();
 
+    console.log("Look for User!");
+
     if (!user) {
+        console.log("No User!");
         window.location.href = '/login.html';
         return;
     }
+
+    console.log("Have User!");
 
     document.getElementById('loading').style.display = 'none';
     document.getElementById('content').style.display = 'block';
