@@ -1,18 +1,10 @@
 :root {
     /* Colors */
-    --color-background: #111318;
-    --color-surface: #1a1d24;
-    --color-surface-hover: #222630;
-    --color-border: #303541;
-
-    --color-text: #f1f3f5;
-    --color-text-muted: #9aa1ad;
-
-    --color-primary: #6c8cff;
-    --color-primary-hover: #829dff;
-
-    --color-danger: #e35d6a;
-    --color-danger-hover: #ed7480;
+    --background: #1d1d16;
+    --card: #2d2d27;
+    --button: #7c7c67;
+    --accent: #7bc5b0;
+    --text: #fbfbf9;
 
     /* Shapes */
     --radius-small: 6px;
@@ -35,15 +27,15 @@
 }
 
 html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: var(--color-text);
-    background: var(--color-background);
+    font-family: "JetBrains Mono", monospace;
+    color: var(--text);
+    background: var(--background);
 }
 
 body {
     margin: 0;
     min-height: 100vh;
-    background: var(--color-background);
+    background: var(--background);
 }
 
 button,
@@ -51,39 +43,13 @@ input {
     font: inherit;
 }
 
+/* --- Containers --- */
+
+.card {
+    margin: var(--space-medium);
+    padding: var(--space-small);
+    background-color: var(--card);
+    border-radius: var(--radius-large);
+}
+
 /* --- Button --- */
-
-button {
-    border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius-small);
-    padding: 8px 14px;
-
-    color: var(--color-text);
-    background: var(--color-surface);
-
-    cursor: pointer;
-}
-
-button:hover {
-    background: var(--color-surface-hover);
-}
-
-button.primary {
-    border-color: var(--color-primary);
-    background: var(--color-primary);
-    color: white;
-}
-
-button.primary:hover {
-    background: var(--color-primary-hover);
-}
-
-button.danger {
-    border-color: var(--color-danger);
-    background: var(--color-danger);
-    color: white;
-}
-
-button.danger:hover {
-    background: var(--color-danger-hover);
-}
