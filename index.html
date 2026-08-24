@@ -3,7 +3,12 @@ layout: default
 title: Home
 ---
 
+
 <h1>My App</h1>
+
+<header>
+    {% include user-control.html %}
+</header>
 
 <a href="{{ '/login.html' | relative_url }}">Login</a>
 <br>

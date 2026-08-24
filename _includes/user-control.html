@@ -1,0 +1,45 @@
+<div id="user-control" class="user-control">
+
+    <!-- Logged out -->
+    <div id="logged-out" style="display: none;">
+        <button id="login-button">Log in</button>
+        <button id="signup-button">Sign up</button>
+    </div>
+
+    <!-- Logged in -->
+    <div id="logged-in" style="display: none;">
+        <span id="user-email"></span>
+        <button id="logout-button">Log out</button>
+    </div>
+
+    <!-- Authentication popup -->
+    <dialog id="auth-dialog">
+        <form id="auth-form">
+
+            <h2 id="auth-title">Log in</h2>
+
+            <input
+                id="auth-email"
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                id="auth-password"
+                type="password"
+                placeholder="Password"
+                required
+            >
+
+            <p id="auth-error"></p>
+
+            <button type="submit">Continue</button>
+            <button type="button" id="auth-cancel">Cancel</button>
+
+        </form>
+    </dialog>
+
+</div>
+
+<script src="{{ '/assets/js/user-control.js' | relative_url }}"></script>
