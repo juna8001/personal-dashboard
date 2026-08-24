@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ page.title }} | {{ site.title }}</title>
+
+    <!-- Supabase library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+    <!-- Our Supabase configuration -->
+    <script src="{{ '/assets/js/supabase.js' | relative_url }}"></script>
 </head>
 
 <body>
-    So _layouts/default.html should have:
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-<script src="{{ '/assets/js/supabase.js' | relative_url }}"></script>
-
     {{ content }}
 </body>
 </html>
