@@ -1,20 +1,25 @@
-<div id="user-control" class="user-control">
+<div class="user-control">
 
-    <!-- Logged out -->
-    <div id="logged-out" style="display: none;">
-        <button id="login-button">Log in</button>
-        <button id="signup-button">Sign up</button>
+    <div id="logged-out" class="user-control__group" style="display: none;">
+        <button id="login-button" class="user-control__button">
+            Log in
+        </button>
+
+        <button id="signup-button" class="user-control__button user-control__button--primary">
+            Sign up
+        </button>
     </div>
 
-    <!-- Logged in -->
-    <div id="logged-in" style="display: none;">
-        <span id="user-email"></span>
-        <button id="logout-button">Log out</button>
+    <div id="logged-in" class="user-control__group" style="display: none;">
+        <span id="user-email" class="user-control__user"></span>
+
+        <button id="logout-button" class="user-control__button">
+            Log out
+        </button>
     </div>
 
-    <!-- Authentication popup -->
-    <dialog id="auth-dialog">
-        <form id="auth-form">
+    <dialog id="auth-dialog" class="auth-dialog">
+        <form id="auth-form" class="auth-dialog__form">
 
             <h2 id="auth-title">Log in</h2>
 
@@ -32,10 +37,17 @@
                 required
             >
 
-            <p id="auth-error"></p>
+            <p id="auth-error" class="auth-dialog__error"></p>
 
-            <button type="submit">Continue</button>
-            <button type="button" id="auth-cancel">Cancel</button>
+            <div class="auth-dialog__buttons">
+                <button type="button" id="auth-cancel">
+                    Cancel
+                </button>
+
+                <button type="submit" class="user-control__button--primary">
+                    Continue
+                </button>
+            </div>
 
         </form>
     </dialog>
