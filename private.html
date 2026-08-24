@@ -16,7 +16,7 @@ title: Private
 
 <script>
 async function checkAuth() {
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { user } } = await supabaseClient.auth.getUser();
 
     if (!user) {
         window.location.href = '{{ "/login.html" | relative_url }}';
@@ -28,7 +28,7 @@ async function checkAuth() {
 }
 
 document.getElementById('logout').addEventListener('click', async () => {
-    await supabase.auth.signOut();
+    await supabaseClient.auth.signOut();
     window.location.href = '{{ "/" | relative_url }}';
 });
 

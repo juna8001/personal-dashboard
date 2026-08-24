@@ -32,7 +32,7 @@ const error = document.getElementById('error');
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const { error: loginError } = await supabase.auth.signInWithPassword({
+    const { error: loginError } = await supabaseClient.auth.signInWithPassword({
         email: document.getElementById('email').value,
         password: document.getElementById('password').value
     });
